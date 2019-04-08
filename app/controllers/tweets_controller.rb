@@ -16,10 +16,10 @@ class TweetsController < ApplicationController
 
   post '/tweets/new' do
     if logged_in?
-      @tweet = Tweet.create(content: params[:content])
       if params[:content] == ""
         redirect to '/tweets/new'
       else
+        @tweet = Tweet.create(content: params[:content])
         @current_user = User.find_by_id(session[:user_id])
         @tweet.user_id = @current_user.id
         @tweet.save
