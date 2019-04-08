@@ -16,7 +16,7 @@ class TweetsController < ApplicationController
 
   post '/tweets/new' do
     if logged_in?
-      @tweet = Tweet.new(content: params[:content])
+      @tweet = Tweet.create(content: params[:content])
     end
   end
 
