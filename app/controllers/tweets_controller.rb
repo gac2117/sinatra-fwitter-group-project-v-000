@@ -43,7 +43,7 @@ class TweetsController < ApplicationController
       @tweet = Tweet.find_by_id(params[:id])
       erb :'/tweets/edit_tweet'
     end
-      
+
   end
 
   patch '/tweets/:id' do
