@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   post '/signup' do
     user = User.create(params[:user])
-    if !params[:username]
+    if !params["username"]
       redirect to '/signup'
     else
       session[:user_id] = user.id
