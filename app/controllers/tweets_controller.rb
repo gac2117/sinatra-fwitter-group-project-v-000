@@ -14,7 +14,7 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets/new' do
-    
+
   end
 
 end
