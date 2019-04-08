@@ -19,7 +19,6 @@ class TweetsController < ApplicationController
       @tweet = Tweet.create(content: params[:content])
       @current_user = User.find_by_id(session[:user_id])
       @tweet.user_id = @current_user.id
-      binding.pry
     end
   end
 
