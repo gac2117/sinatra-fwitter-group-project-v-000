@@ -14,7 +14,6 @@ class UsersController < ApplicationController
     else
       @user = User.create(username: params[:username], email: params[:email], password: params[:password])
       session[:user_id] = @user.id
-      binding.pry
       redirect to '/tweets'
     end
   end
