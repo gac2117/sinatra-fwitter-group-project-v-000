@@ -17,7 +17,8 @@ class TweetsController < ApplicationController
   post '/tweets/new' do
     if logged_in?
       @tweet = Tweet.create(content: params[:content])
-      @tweet.user_id = @user.id
+      @current_user = User.find_by_id(session[:user_id])
+      @tweet.user_id = @current_user.id
       binding.pry
     end
   end
