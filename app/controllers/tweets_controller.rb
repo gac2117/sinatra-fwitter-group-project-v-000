@@ -18,7 +18,7 @@ class TweetsController < ApplicationController
     if logged_in?
       @tweet = Tweet.create(content: params[:content])
       @tweet.user_id = @user.id
-      
+      binding.pry
     end
   end
 
