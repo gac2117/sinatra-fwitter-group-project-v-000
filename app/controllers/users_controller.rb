@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     user = User.create(params[:user])
     if user
       session[:user_id] = user.id
-      redirect to '/twitter'
+      redirect to '/tweets/tweets'
     else
       redirect to '/signup'
     end
