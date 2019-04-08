@@ -45,6 +45,7 @@ class TweetsController < ApplicationController
         redirect to "/tweets/#{@tweet.id}/edit"
       else
         erb :'/tweets/edit_tweet'
+      end
     end
 
   end
