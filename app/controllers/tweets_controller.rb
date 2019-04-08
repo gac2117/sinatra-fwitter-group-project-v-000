@@ -13,4 +13,8 @@ class TweetsController < ApplicationController
       erb :'/tweets/new'
   end
 
+  post '/tweets/new' do
+    
+  end
+
 end
