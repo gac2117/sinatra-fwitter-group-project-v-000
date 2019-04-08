@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       redirect to '/signup'
     else
       session[:user_id] = user.id 
-      redirect to '/tweets'
+      redirect to '/signup'
     end
   end
 
