@@ -26,8 +26,6 @@ class TweetsController < ApplicationController
         @tweet.user_id = @current_user.id
         @tweet.save
       end
-    else
-
     end
   end
 
